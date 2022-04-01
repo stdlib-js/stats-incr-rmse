@@ -1,0 +1,49 @@
+{
+  "name": "@stdlib/stats-incr-rmse",
+  "version": "0.0.0",
+  "description": "Compute the root mean squared error (RMSE) incrementally.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./mod.js",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/stats-incr-rmse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "statistics",
+    "stats",
+    "mathematics",
+    "math",
+    "error",
+    "err",
+    "rmse",
+    "rmsd",
+    "mse",
+    "msd",
+    "residuals",
+    "deviation",
+    "difference",
+    "diff",
+    "delta",
+    "incremental",
+    "accumulator",
+    "time series",
+    "timeseries",
+    "forecasting",
+    "forecast",
+    "model",
+    "selection",
+    "evaluation",
+    "prediction"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
