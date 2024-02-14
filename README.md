@@ -63,7 +63,7 @@ The [**root mean squared error**][root-mean-squared-error] (also known as the **
 ## Usage
 
 ```javascript
-import incrrmse from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-rmse@esm/index.mjs';
+import incrrmse from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-rmse@v0.2.0-esm/index.mjs';
 ```
 
 #### incrrmse()
@@ -121,7 +121,7 @@ r = accumulator();
 <script type="module">
 
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import incrrmse from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-rmse@esm/index.mjs';
+import incrrmse from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-rmse@v0.2.0-esm/index.mjs';
 
 var accumulator;
 var v1;
