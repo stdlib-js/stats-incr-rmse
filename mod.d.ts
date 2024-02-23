@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,20 +16,27 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var sqrt = require( '@stdlib/math-base-special-sqrt' );
-var incrmean = require( '@stdlib/stats-incr-mean' );
-
-
-// MAIN //
+/**
+* If provided input values, the accumulator function returns an updated root mean squared error. If not provided input values, the accumulator function returns the current root mean squared error.
+*
+* ## Notes
+*
+* -   If provided `NaN` or a value which, when used in computations, results in `NaN`, the accumulated value is `NaN` for all future invocations.
+*
+* @param x - input value
+* @param y - input value
+* @returns root mean squared error or null
+*/
+type accumulator = ( x?: number, y?: number ) => number | null;
 
 /**
 * Returns an accumulator function which incrementally computes the root mean squared error.
 *
-* @returns {Function} accumulator function
+* @returns accumulator function
 *
 * @example
 * var accumulator = incrrmse();
@@ -46,33 +53,9 @@ var incrmean = require( '@stdlib/stats-incr-mean' );
 * r = accumulator();
 * // returns 5.0
 */
-function incrrmse() {
-	var mean = incrmean();
-	return accumulator;
-
-	/**
-	* If provided input values, the accumulator function returns an updated root mean squared error. If not provided input values, the accumulator function returns the current root mean squared error.
-	*
-	* @private
-	* @param {number} [x] - input value
-	* @param {number} [y] - input value
-	* @returns {(number|null)} root mean squared error or null
-	*/
-	function accumulator( x, y ) {
-		var r;
-		if ( arguments.length === 0 ) {
-			r = mean();
-			if ( r === null ) {
-				return r;
-			}
-			return sqrt( r );
-		}
-		r = y - x;
-		return sqrt( mean( r*r ) );
-	}
-}
+declare function incrrmse(): accumulator;
 
 
 // EXPORTS //
 
-module.exports = incrrmse;
+export = incrrmse;
